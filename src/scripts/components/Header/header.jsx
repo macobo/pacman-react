@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class Header extends React.Component {
-
 	constructor(props) {
 		super(props);
-		this.state = {points: 0, playing: true};
+		this.state = { points: 0, playing: true };
 	}
 
 	componentDidMount() {
@@ -15,12 +14,12 @@ class Header extends React.Component {
 	increase() {
 		if (this.state.playing) {
 			var currentPoints = this.state.points + 1;
-			this.setState({points: currentPoints});
+			this.setState({ points: currentPoints });
 		}
 	}
 
 	gameOver() {
-		this.setState({playing:false, points: 'GAME OVER'});
+		this.setState({ playing: false, points: 'GAME OVER' });
 	}
 
 	render() {
@@ -32,9 +31,5 @@ class Header extends React.Component {
 		);
 	}
 }
-
-Header.defaultProps = {
-
-};
 
 export default Header;

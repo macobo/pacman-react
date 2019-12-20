@@ -1,10 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import SVGInline from "react-svg-inline"
-import icon from '../../../assets/images/pacman.svg';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import SVGInline from 'react-svg-inline'
+import icon from '../../../assets/images/pacman.svg'
 
 class Pacman extends React.Component {
-
 	constructor(props) {
 		super(props);
 		this.state = { looking: 'right', position: {top: 0, left: 0} };
@@ -30,21 +29,21 @@ class Pacman extends React.Component {
 		if (this.state.looking === 'left') {
 			this.setState({
 				position: {top: currentTop, left: Math.max(currentLeft - this.props.velocity, 0) }
-		    });
+	    });
 		} else {
 			if (this.state.looking === 'up') {
 				this.setState({
 					position: {top: Math.max(currentTop - this.props.velocity, 0), left: currentLeft }
-			    });
+		    });
 			} else {
 				if (this.state.looking === 'right') {
 					this.setState({
 						position: {top: currentTop, left: Math.min(currentLeft + this.props.velocity, window.innerWidth - this.props.border - this.props.pacmanSize) }
-				    });
+			    });
 				} else {
 					this.setState({
 						position: {top: Math.min(currentTop + this.props.velocity, window.innerHeight - this.props.pacmanSize - this.props.border - this.props.topScoreBoard), left: currentLeft }
-				    });
+			    });
 				}
 			}
 		}

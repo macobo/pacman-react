@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import SVGInline from "react-svg-inline"
-import icon from '../../../assets/images/ghost.svg';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import SVGInline from 'react-svg-inline'
+import icon from '../../../assets/images/ghost.svg'
 
 class Ghost extends React.Component {
-
 	constructor(props) {
 		super(props);
-		this.state = {position: {top: 300, left: 300}, direction: 'left', color: this.props.color };
+		this.state = { position: {top: 300, left: 300}, direction: 'left', color: this.props.color };
 	}
 
 	componentDidMount() {
@@ -31,7 +30,6 @@ class Ghost extends React.Component {
 	}
 
 	move() {
-
 		var currentLeft = this.state.position.left;
 		var currentTop = this.state.position.top;
 

@@ -94,7 +94,7 @@ class Scene extends React.Component {
 
 			var position = {left: currentLeft, top: currentTop};
 			currentLeft = currentLeft + this.props.foodSize;
-		    foods.push(<Food ref={ 'food' + i } position = {position} key = {i} />);
+	    foods.push(<Food ref={ 'food' + i } position = {position} key = {i} />);
 		}
 
 		return (
