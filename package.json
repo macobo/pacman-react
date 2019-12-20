@@ -10,7 +10,7 @@
     "assets": "cp -R ./src/assets/* ./dist/",
     "fonts": "cp -R ./fonts ./dist/",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production  && npm run assets && npm run fonts",
+    "build": "webpack --mode production  && yarn assets && yarn fonts",
     "test": "NODE_ENV=test jest",
     "test:watch": "jest --watch"
   },
@@ -53,8 +53,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.13.0",
     "url-loader": "^1.0.1",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.0.13",
+    "webpack": "4.41.4",
+    "webpack-cli": "3.3.10",
     "webpack-dev-server": "^3.1.4",
     "webpack-md5-hash": "0.0.6"
   },

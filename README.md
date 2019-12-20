@@ -9,22 +9,22 @@ Take a look to the [Demo](https://mbfassnacht.github.io/pacman-react/)
 
 ## INSTALLATION DEPENDENCES
 ```javascript
-npm install
+yarn
 ```
 ### USAGE
 The following commands are available in your project:
 ```bash
 # Start for development
-npm start
+yarn start
 
 # Just build the dist version and copy static files
-npm run build
+yarn build
 
 # Run unit tests
-npm test
+yarn test
 
 # Auto-run unit tests on file changes
-npm run test:watch
+yarn test:watch
 
 # To debug in chrome
 
@@ -34,5 +34,5 @@ node --inspect-brk node_modules/.bin/jest --runInBand [any other arguments here]
 # To debug in Google Chrome (or any Chromium-based browser), simply open your browser and go to chrome://inspect and click on "Open Dedicated DevTools for Node",
 
 # Lint all files in src (also automatically done AFTER tests are run)
-npm run lint
+yarn lint
 ```
