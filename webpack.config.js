@@ -19,7 +19,7 @@ module.exports = {
                 use:  [  'style-loader','postcss-loader', 'sass-loader']
             },
             {
-                test: /\.(woff|woff2|eot|ttf)$/,
+                test: /\.(woff|woff2|eot|ttf|mp3)$/,
                 use: {
                     loader: 'file-loader'
                 }

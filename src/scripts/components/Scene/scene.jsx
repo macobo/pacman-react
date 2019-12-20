@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom';
 import Pacman from '../Pacman/pacman.jsx';
 import Ghost from '../Ghost/ghost.jsx';
 import Food from '../Food/food.jsx';
+import Music from '../Music/music.jsx';
 
 class Scene extends React.Component {
+
+	constructor(props) {
+		super(props)
+		this.state = {};
+	}
 
 	componentDidMount() {
 		this.container = ReactDOM.findDOMNode(this);
@@ -106,6 +112,7 @@ class Scene extends React.Component {
 				<Ghost color="green" ref="ghost2"></Ghost>
 				<Ghost color="blue" ref="ghost3"></Ghost>
 				<Ghost color="orange" ref="ghost4"></Ghost>
+				{!this.state.gameOver ? <Music /> : null}
 			</div>
 		);
 	}
