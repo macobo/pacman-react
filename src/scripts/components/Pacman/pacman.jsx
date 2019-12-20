@@ -11,16 +11,21 @@ class Pacman extends React.Component {
 
 	componentDidMount() {
 		this.container = ReactDOM.findDOMNode(this);
-		setInterval(this.move.bind(this), 100);
+		this.moveLoop = setInterval(this.move.bind(this), 100);
 		document.addEventListener('keydown', this.handleKeyDown.bind(this));
 	}
 
 	handleKeyDown(e) {
 		var arrows = [37, 38, 39, 40];
 
-		if (arrows.indexOf(e.keyCode) >= 0) {
+		if (!this.state.gameOver && arrows.indexOf(e.keyCode) >= 0) {
 			this.rotate(e.keyCode);
 		}
+	}
+
+	gameOver() {
+		clearInterval(this.moveLoop)
+		this.setState({ gameOver: true })
 	}
 
 	move() {
