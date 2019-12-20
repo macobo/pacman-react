@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import music from '../../../assets/audio/eat.wav';
+
+const eatingSound = new Audio(music)
+eatingSound.volume = 0.05
 
 class Food extends React.Component {
 
@@ -19,6 +23,7 @@ class Food extends React.Component {
 	}
 
 	ate() {
+		eatingSound.play()
 		this.setState({
 			hidden: true
 		});
