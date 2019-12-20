@@ -41,6 +41,7 @@ class Scene extends React.Component {
 			if (this.crashed) {
 				this.props.gameOver();
 				this.refs.pacman.gameOver();
+				this.setState({ gameOver: true })
 				clearInterval(this.intervalCrash);
 				this.killGhosts();
 				break;

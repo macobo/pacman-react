@@ -7,8 +7,11 @@ class Music extends React.Component {
 		this.audio = new Audio(music);
     this.audio.currentTime = 3;
     this.audio.play();
+  }
 
-	}
+  componentWillUnmount() {
+    this.audio.pause()
+  }
 
 	render() {
     return null;
